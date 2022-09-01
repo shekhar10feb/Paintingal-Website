@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    background-color: rgba(95, 95, 95, 0.3);
+    place-items: center;
+}
+
+.wrapper {
+    max-width: 100%;
+    position: fixed;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 3em;
+    padding-bottom: 1em;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+h1 {
+    color: royalblue;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 1em 2em 2em 2em;
+    border: none;
+    outline: none;
+}
+
+input {
+    width: 100%;
+    color: gray;
+    font-size: 1.6rem;
+    font-weight: 300;
+    background-color: rgb(245, 245, 245);
+    padding: 0.6em 1em;
+    border-radius: 10px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    outline: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    width: 42%;
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 0.6em;
+    color: #fff;
+    background-color: royalblue;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #fff;
+    color: royalblue;
+    transition: all 0.3s ease-in-out;
+
+}
+
+input, button {
+    margin: 1rem 0;
+}
+
+input, button, h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+

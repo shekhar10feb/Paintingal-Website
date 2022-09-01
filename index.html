@@ -4,22 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login-SignUp Page</title>
-    <link rel="stylesheet" href="./css-files/style.css">
+    <title>SignUp</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <section id="container">
-        <div class="sub-container">
-            <h1 class="websiteName">Welcome to Our Website</h1>
-            <div class="page-container">
-                <div class="page page1">
-                    <a href="login.html">Login</a>
-                </div>
-                <div class="page page2">
-                    <a href="signup.html">SignUp</a>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="wrapper">
+        <h1><u>SignUp</u></h1>
+        <form action="./html2.html">
+            <input type="text" id="fname" placeholder="Full Name">
+            <input type="email" id="email" placeholder="Email">
+            <button type="submit" value="click" onclick='passValues()'>Submit</button>
+        </form>
+    </div>
+    <script src="./behave.js"></script>
 </body>
 </html>
