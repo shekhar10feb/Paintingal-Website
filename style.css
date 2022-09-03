@@ -32,9 +32,9 @@ body {
     width: 35rem;
     min-height: 65vh;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding-top: 2rem;
     background-color: #fff;
 }
 
@@ -47,7 +47,7 @@ body {
     position: relative;
     background-color: royalblue;
     padding: 2px;
-    border-radius: 2rem;
+    border-radius: 10px;
     border: none;
     outline: none;
 }
@@ -58,7 +58,7 @@ body {
     color: #fff;
     font-size: 1.4rem;
     font-weight: 600;
-    border-radius: 2rem;
+    border-radius: 10px;
     padding: 0.6em;
     border: none;
     outline: none;
@@ -72,7 +72,7 @@ body {
     background-color: #fff;
     font-size: 1.4rem;
     font-weight: 600;
-    border-radius: 2rem;
+    border-radius: 10px;
     padding: 0.6em;
     border: none;
     outline: none;
@@ -82,7 +82,7 @@ body {
 }
 
 .moveBtnClick {
-    transform: translateX(101%);
+    transform: translateX(102%);
     transition: all 0.3s ease-in-out;
 }
 
