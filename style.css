@@ -39,7 +39,7 @@ body {
 
 
 .swipe {
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -128,6 +128,7 @@ input:focus {
 }
 
 .form {
+    width: 90%;
     display: none;
     margin-top: 2.5rem;
 }
@@ -146,7 +147,7 @@ input:focus {
     }
     .modalForm {
         width: 100%;
-        min-height: 55vh;
+        min-height: 54vh;
     }
     .btn, .moveBtn, input, .submit {
         font-size: 1.2rem;
