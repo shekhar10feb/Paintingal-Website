@@ -9,12 +9,26 @@
 </head>
 <body>
     <div class="wrapper">
-        <h1><u>SignUp</u></h1>
-        <form action="./html2.html">
-            <input type="text" id="fname" placeholder="Full Name">
-            <input type="email" id="email" placeholder="Email">
-            <button type="submit" value="click" onclick='passValues()'>Submit</button>
-        </form>
+        <div class="modalForm">
+            <div class="swipe">
+                <button class="btn signupBtn">SignUp</button>
+                <button class="moveBtn">SignUp</button>
+                <button class="btn loginBtn">Login</button>
+            </div>
+            <form action="./homepage.html" class="form signup signupForm">
+                <input type="text" id="fname" placeholder="Firstname">
+                <input type="text" id="lname" placeholder="Lastname">
+                <input type="email" id="email" placeholder="Email">
+                <input type="password" id="password" placeholder="Password" value="">
+                <input type="password" id="password" placeholder="Confirm Password" value="">
+                <button type="submit" class="submit">Submit</button>
+            </form>
+            <form action="" class="form login">
+                <input type="email" id="email" placeholder="Email">
+                <input type="password" id="password" placeholder="Password" value="">
+                <button type="submit" class="submit">Submit</button> 
+            </form>
+        </div>
     </div>
     <script src="./behave.js"></script>
 </body>
