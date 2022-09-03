@@ -34,7 +34,6 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 1rem;
     background-color: #fff;
 }
 
@@ -139,5 +138,21 @@ input:focus {
 
 .loginForm {
     display: block;
+}
+
+@media screen and (max-width: 420px) {
+    .wrapper {
+        width: 90%;
+    }
+    .modalForm {
+        width: 100%;
+        min-height: 55vh;
+    }
+    .btn, .moveBtn, input, .submit {
+        font-size: 1.2rem;
+    }
+    .form {
+        margin-top: 1.5em;
+    }
 }
 
