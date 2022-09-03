@@ -32,9 +32,11 @@ body {
     width: 35rem;
     min-height: 65vh;
     display: flex;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     background-color: #fff;
+    border: 1px solid red;
 }
 
 
