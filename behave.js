@@ -13,12 +13,14 @@
         fname: document.querySelector('#fname').value,
         lname: document.querySelector('#lname').value,
         email: document.querySelector('#email').value,
-        password: document.querySelector('#password').value 
+        password: document.querySelector('#password').value,
+        confirmPassword: document.querySelector('#confirmPassword').value
       }
 
       // To push the user's data into UsersData array 
       UsersData.push(user);
 
+      // console.log(UsersData);
       // To convert object to JSON string
       const jsonObj = JSON.stringify(UsersData);
 
@@ -28,7 +30,7 @@
     }
 
     document.addEventListener('DOMContentLoaded', () => {
-       document.querySelector('button').addEventListener('click', addUser);
+       document.querySelector('.submit').addEventListener('click', addUser);
     });
 
 
