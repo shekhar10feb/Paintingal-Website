@@ -105,7 +105,7 @@ input:focus {
     outline: none;
 }
 
-.submit {
+.submit, .loginSubmit {
     width: 35%;
     font-size: 1.4rem;
     font-weight: 600;
@@ -121,7 +121,7 @@ input:focus {
     transition: all 0.3s ease-in-out;
 }
 
-.submit:hover {
+.submit:hover, .loginSubmit:hover {
     background-color: #fff;
     color: royalblue;
     transition: all 0.3s ease-in-out;
@@ -150,7 +150,7 @@ input:focus {
         width: 100%;
         min-height: 54vh;
     }
-    .btn, .moveBtn, input, .submit {
+    .btn, .moveBtn, input, .submit, .loginSubmit {
         font-size: 1.2rem;
     }
     .form {
