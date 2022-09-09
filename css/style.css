@@ -16,7 +16,7 @@ body {
     place-items: center;
     font-size: 1.6rem;
     background-color: rgb(173, 172, 172);
-    background-image: url('https://www.pngitem.com/pimgs/m/2-20632_rainbow-background-png-transparent-background-rainbow-clipart-png.png');
+    background-image: url("../image/backgroundPicture.png");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
