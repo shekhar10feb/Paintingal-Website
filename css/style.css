@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    display: grid;
+    place-items: center;
+    font-size: 1.6rem;
+    background-color: rgb(173, 172, 172);
+    background-image: url('https://www.pngitem.com/pimgs/m/2-20632_rainbow-background-png-transparent-background-rainbow-clipart-png.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Media Query for min-width: 300px  */
+.container {
+    width: 100%;
+    color: #fff;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 2fr 1fr 0.1fr;
+    grid-template-areas: 'navbar'
+                         'main'
+                         'main'
+                         'footer';
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.center, footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+nav {
+    grid-area: navbar;
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+}
+
+main {
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0rem 1rem;
+}
+
+footer {
+    grid-area: footer;
+}
+
+.logo {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    top: 0;
+    background-color: transparent;
+}
+
+.logo img {
+    width: 7rem;
+    margin: 0.5rem 0 0 1rem;
+    border-radius: 50%;
+}
+
+.intro {
+    width: 100%;
+    min-height: 80vh;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 2rem;
+    border-radius: 10px;
+}
+
+.intro .introPara {
+    font-size: 2.5rem;
+    color: #000;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+}
+
+.intro hr {
+    color: rgb(167, 165, 165);
+    margin: 1rem 0;
+}
+
+.intro .introMsg {
+    display: inline-block;
+    font-size: 1.5rem;
+    color: rgb(68, 67, 67);
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    border-top: 2px solid rgb(148, 147, 147);
+}
+
+.wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: -2px 2px 5px 3px grey;
+}
+
+form {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.avatar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+input {
+    width: 100%;
+    font-size: 1.5rem;
+    background-color: rgb(238, 238, 238);
+    padding: 0.8rem;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+}
+
+#submit, #submitLogin {
+    width: 7rem;
+    padding: 0.8rem;
+    border-radius: 3px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+#submit:hover, #submitLogin:hover {
+    background-color: royalblue;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.login {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signupOption, .loginOption {
+    font-size: 1.2rem;
+    background-color: transparent;
+    text-decoration: underline;
+    color: rgb(194, 115, 128);
+    border: none;
+    cursor: pointer;
+}
+
+.avatar, input, #submit, .login, #submitLogin {
+    margin: 1rem 0;
+}
+
+.form {
+    display: none;
+}
+
+.signupForm {
+    display: block;
+}
+
+.loginForm {
+    display: block;
+}
+
+.signupDiv, .loginDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.signupDiv p, .loginDiv p {
+    color: #000;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+footer {
+    grid-area: footer;
+}
+
+@media screen and (min-width: 600px){
+    .intro {
+        min-height: 50vh;
+        margin: 8rem 0;
+        margin-bottom: 14rem;
+    }
+    .intro .introPara {
+        font-size: 2.5rem;
+    }
+    .intro .introMsg {
+        font-size: 1.5rem;
+    }
+    .wrapper {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 720px){
+    body {
+        min-height: 100vh;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 0.2fr 2fr 1fr 0.1fr;
+        grid-template-areas: 'navbar navbar navbar navbar'
+                             'main main main main'
+                             'main main main main';
+        margin-top: 2rem;
+    }
+    main {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction:row;
+        padding: 0rem 2rem;
+    }
+    .logo {
+        margin-bottom: 1rem;
+    }
+    .logo img {
+        width: 9rem;
+        margin: 0.5rem 0 0 1rem;
+        border-radius: 50%;
+    }
+    .intro {
+        min-height: 100%;
+        margin: 10rem auto;
+        margin-right: 1rem;
+    }
+    .intro .introPara {
+        font-size: 3rem;
+    }
+    .intro .introMsg {
+        font-size: 1.8rem;
+    }
+    
+    .wrapper {
+        width: 40rem;
+    }
+}
