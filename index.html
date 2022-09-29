@@ -19,7 +19,7 @@
 </head>
 <body>
     <!-- container  -->
-    <di class="container">
+    <div class="container">
         
         <!-- Logo  -->
         <nav class="logo">
@@ -32,6 +32,7 @@
                 <p class="introPara">Welcome to Paintingal!</p>
                 <p class="introMsg">Register here, upload your painting and show it to the world!</p>
             </div>
+            
             <!-- Wrapper Class -->
             <div class="wrapper">
                 <!-- Signup Form  -->
@@ -39,9 +40,10 @@
                     <div class="avatar">
                         <img src="./image/avatar.webp" alt="">
                     </div>
-                    <input type="text" id="username" placeholder="Username">
-                    <input type="email" id="email" placeholder="Email">
-                    <input type="password"  id="password" placeholder="Password">
+                    <input type="text" id="fullname" placeholder="Fullname" required>
+                    <input type="text" id="username" placeholder="Username" required>
+                    <input type="email" id="email" placeholder="Email" required>
+                    <input type="password"  id="password" placeholder="Password" required>
                     <button type="submit" id="submit">Submit</button>
                     <!-- <hr> -->
                     <div class="signupDiv">
@@ -54,8 +56,8 @@
                     <div class="avatar">
                         <img src="./image/avatar.webp" alt="">
                     </div>
-                    <input type="text" id="usernameLogin" placeholder="Username">
-                    <input type="password" id="passwordLogin" placeholder="Password">
+                    <input type="text" id="usernameLogin" placeholder="Username" required>
+                    <input type="password" id="passwordLogin" placeholder="Password" required>
                     <button type="submit" id="submitLogin">Submit</button>
                     <div class="loginDiv">
                         <p>Don't have any account? <button type="button" class="signupOption">SignUp</button></p>
@@ -64,6 +66,7 @@
             </div>
         </main>
         <footer></footer>
+    </div>
     <script src="./js/behave.js"></script>
 </body>
 </html>
