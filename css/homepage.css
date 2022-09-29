@@ -132,7 +132,7 @@ footer {
 }
 
 .profilePicDiv {
-    width: 7.5rem;
+    width: 7rem;
     height: 7rem;
     position: relative;
     background: url('../image/blank-profile-picture-973460__340.webp');
@@ -150,21 +150,26 @@ footer {
     font-weight: bold;
     color: #ccc;
     z-index: 1;
-    border: 3px solid #fff;
     cursor: pointer;
+    border: none;
+    outline: none;
 }
   
 .profilePicDiv:hover::after {
-    content: 'Change Picture';
+    content: '';
     width: 90%;
     height: 90%;
     color: #fff;
     position: absolute;
     text-align: center;
     background: gray;
-    border: 3px solid #fff;
+    background-image: url('../image/camera.png');
+    background-origin: content-box;
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: 60%;
+    border: 2px solid #fff;
     border-radius: 50%;
-    
     /*   Default text  */
     display: flex;
     justify-content: center;
@@ -184,42 +189,10 @@ footer {
     border-radius: 10px;
 }
   
-.image-preview {
-    width: 7.5rem;
-    height: 7rem;
-    
-  /*   Default text  */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    color: #ccc;
-    z-index: 1;
-}
-  
-.image-preview:hover::after {
-    content: 'Change Picture';
-    width: 90%;
-    height: 90%;
-    color: #fff;
-    position: absolute;
-    background: gray;
-    border: 3px solid #fff;
-    border-radius: 50%;
-    
-    /*   Default text  */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    opacity: 0.8;
-    z-index: 10;
-} 
-  
 .image-preview__image {
     display: none;
-    width: 100%;
-    height: 100%;
+    width: 7rem;
+    height: 7rem;
     object-fit: fill;
     border-radius: 50%;
 }
@@ -297,11 +270,13 @@ footer {
     cursor: pointer;
     border: none;
     outline: none;
+    transition: transform 0.2s ease-in;
 }
   
 #close:hover {
     color: #fff;
-    border-radius: 5px;
+    transition: transform 0.2s ease-in;
+    transform: scale(1.1);
 }
   
 .inputDiv {
