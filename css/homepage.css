@@ -14,44 +14,92 @@ body {
     display: grid;
     place-items: center;
     background-color: rgba(95, 95, 95, 0.3);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.wrapper {
-    width: 90%;
-    height: 90%;
+/* Media Query for min-width: 300px */
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 2fr 0.2fr;
+    grid-template-areas: 'navbar'
+                         'main'
+                         'main'
+                         'footer';
+}
+
+nav {
+    grid-area: navbar;
+    width: 100%;
     background-color: #fff;
+    border-bottom: 2px solid rgb(197, 195, 195);
+}
+
+main {
+    grid-area: main;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    position: relative;
-    padding: 2rem;
-    border-radius: 10px;
-    border: none;
-    outline: none;
-    
+}
+
+footer {
+    grid-area: footer;
+}
+
+.logo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1rem;
+    background-color: #fff;
+}
+
+.logoImage {
+    width: 30%;
+    min-height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logoImage img {
+    width: 7rem;
+    border-radius: 50%;
+}
+
+.logo .addIconDiv {
+    width: 30%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addIconDiv img {
+    width: 3rem;
+    cursor: pointer;
 }
 
 .logoutDiv {
-    width: 90%;
-    position: absolute;
-    top: 2rem;
+    width: 30%;
+    min-height: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 0.6rem;
-    /* border: 1px solid red; */
+    margin-right: 1rem;
 }
 
 .logout {
-    width: 10rem;
     font-size: 1.4rem;
     font-weight: 600;
     padding: 0.6em;
     color: #fff;
     background-color: royalblue;
     border-radius: 10px;
-    /* margin-top: 1rem; */
     border: none;
     outline: none;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
@@ -66,12 +114,336 @@ body {
 
 }
 
-p, span {
-    font-size: clamp(1.5rem, 2rem, 2.5rem);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin: 1rem auto;
+.intro {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 1rem;
+    border-bottom: 2px solid rgb(197, 195, 195);
 }
 
-span {
-    color: royalblue;
+.info {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1rem;
 }
+
+.profilePicDiv {
+    width: 7.5rem;
+    height: 7rem;
+    position: relative;
+    background: url('../image/blank-profile-picture-973460__340.webp');
+    background-origin: content-box;
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
+    border-radius: 50%;
+    
+    /*   Default text  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #ccc;
+    z-index: 1;
+    border: 3px solid #fff;
+    cursor: pointer;
+}
+  
+.profilePicDiv:hover::after {
+    content: 'Change Picture';
+    width: 90%;
+    height: 90%;
+    color: #fff;
+    position: absolute;
+    text-align: center;
+    background: gray;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    
+    /*   Default text  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    opacity: 0.8;
+    z-index: 10;
+}
+
+#inputFile {
+    width: 80%;
+    color: #fff;
+    background-color: green;
+    position: absolute;
+    visibility: hidden;
+    padding: 1rem;
+    border-radius: 10px;
+}
+  
+.image-preview {
+    width: 7.5rem;
+    height: 7rem;
+    
+  /*   Default text  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #ccc;
+    z-index: 1;
+}
+  
+.image-preview:hover::after {
+    content: 'Change Picture';
+    width: 90%;
+    height: 90%;
+    color: #fff;
+    position: absolute;
+    background: gray;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    
+    /*   Default text  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    opacity: 0.8;
+    z-index: 10;
+} 
+  
+.image-preview__image {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 50%;
+}
+  
+
+.usernameDiv {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.editBio {
+    width: 80%;
+    position: absolute;
+    background-color: rgb(111, 110, 110);
+    color: #fff;
+    font-size: 1.4rem;
+    padding: 1rem;
+    margin-top: 4rem;
+    margin-left: 0.5rem;
+    border-radius: 5px;
+}
+
+.closeBtn {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.page {
+    width: 100%;
+    min-height: 100%;
+    background-color: gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    padding: 0.6rem 1rem;
+    border-radius: 5px;
+}
+  
+.closeBtn, .inputDiv, .saveDiv {
+    width: 100%;
+}
+  
+#saveBtn, #inputName, #inputBio {
+    border-radius: 5px;
+    padding: 0.4rem 0.5rem;
+    border: none;
+    outline: none;
+}
+  
+#inputBio {
+    margin-bottom: 1rem;
+}
+  
+#saveBtn {
+    background-color: #fff;
+    margin-top: 0;
+    cursor: pointer;
+}
+  
+#close {
+    color: #c0bfbf;
+    font-weight: bold;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+  
+#close:hover {
+    color: #fff;
+    border-radius: 5px;
+}
+  
+.inputDiv {
+    width: 100%;
+    min-height: 4rem;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#editInput, #myProfilePic {
+    width: 100%;
+    color: #000;
+    font-size: 1.5rem;
+    border: 1px solid grey;
+    background-color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.saveBtn, .submitProfilePic {
+    width: 40%;
+    color: #fff;
+    background-color: blue;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#editBtn {
+    color: #000;
+    font-size: 1.3rem;
+    font-weight: 600;
+    background-color: #fff;
+    padding: 0.5rem 1rem;
+    margin-left: 1rem;
+    border-radius: 5px;
+    border: 1px solid #000;
+    cursor: pointer;
+    transition: transform 0.3s ease-in;
+}
+
+#editBtn:hover {
+    transition: transform 0.3s ease-in;
+    transform: translateY(-1px);
+}
+
+.nameDiv {
+    display: inline-block;
+    /* justify-content: center;
+    align-items: flex-start; */
+    /* flex-direction: column; */
+    /* margin: 2rem 0; */
+    /* padding-left: 1rem; */
+    
+    /* border: 1px solid red; */
+}
+
+.nameDiv .name {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin: 0;
+    /* border: 1px solid red; */
+}
+
+.nameDiv .bio {
+    font-size: 1.6rem;
+    margin: 0;
+    /* border: 1px solid blue; */
+}
+
+
+
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    /* display: flex; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 1rem;
+    /* border-radius: 10px; */
+    border: none;
+    outline: none;
+    /* border: 1px solid red;  */
+}
+
+.wrapperMsg {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    padding: 0.3rem;
+    /* border: 1px solid red; */
+}
+
+.wrapperMsg p {
+    font-size: 1.5rem;
+    /* border: 1px solid red; */
+}
+.itemDiv {
+    width: 100%;
+    min-height: 80%;
+    /* display: inline-block; This is important for the items */
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    /* border: 1px solid red; */
+    border-radius: 5px;
+    border: 1px solid rgb(139, 139, 139);
+}
+
+.itemDiv .itemDivMsg {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.item {
+    width: 6rem;
+    height: 6rem;
+    display: inline-block;
+    margin: 0.3rem;
+    background-color: grey;
+    border-radius: 5px;
+    border: 1px solid rgb(139, 139, 139);
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
